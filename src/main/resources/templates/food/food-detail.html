@@ -13,13 +13,13 @@
 </head>
 <body>
 <div class="container">
-  <h1 style="text-align:center;">Food Details</h1>
+  <h1 style="text-align:center;font-family: 'Comic Sans MS'">Food Details</h1>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Food</h5>
       <p class="card-text" th:text=" 'ID: '+ ${food.id}" />
-      <p class="card-text" th:text="'Name: '+${food.plateName}" />
-      <p class="card-text" th:text="'CookTime: '+${food.cookTime}" />
+      <p class="card-text" th:text="'Name: '+${food.name}" />
+      <p class="card-text" th:text="'Cook Time: '+${food.cookTime}" />
       <p class="card-text" th:text="'Price: '+${food.price}" />
       <a th:href="@{/food/update/id={id}(id=${food.id})}" class="btn btn-primary">Edit</a>
       <a th:href="@{/food/delete/id={id}(id=${food.id})}" class="btn btn-primary">Delete</a>

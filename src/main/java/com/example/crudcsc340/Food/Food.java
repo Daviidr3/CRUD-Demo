@@ -16,13 +16,13 @@ public class Food {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String plateName;
+    private String name;
     private int cookTime;
     private double price;
 
-    public Food(String plateName, int cookTime, double price){
+    public Food(String name, int cookTime, double price){
 
-        this.plateName = plateName;
+        this.name = name;
         this.cookTime = cookTime;
         this.price = price;
     }

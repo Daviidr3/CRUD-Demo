@@ -14,20 +14,22 @@
 <body>
 <div class="container">
 
-    <h1 style="text-align:center;">Enter dish name</h1>
+    <h1 style="text-align:center; font-family: 'Comic Sans MS'" >Enter dish name</h1>
+
+
 
     <div style="align-content: center;">
         <form action="/food/create" method="post">
-            <<!--div class="form-group">
-                         <label for="catId">Cat ID:</label>
-                         <input type="text" class="form-control" name="catId" id="catId" placeholder="Enter ID"></input>
+            <!--div class="form-group">
+                         <label for="foodId">Food ID:</label>
+                         <input type="text" class="form-control" name="foodId" id="foodId" placeholder="Enter ID"></input>
                      </div>-->
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required></input>
             </div>
             <div class="form-group">
-                <label for="cookTime">CookTime:</label>
+                <label for="cookTime">Cook Time (minutes):</label>
                 <input type="text" class="form-control" name="cookTime" id="cookTime" placeholder="Enter Cook Time" required></input>
             </div>
             <div class="form-group">
@@ -40,6 +42,5 @@
 
     </div>
 </div>
-
 </body>
 </html>

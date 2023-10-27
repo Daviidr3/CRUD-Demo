@@ -24,7 +24,7 @@ public class FoodController {
     public String getAllFoods(Model model) {
         model.addAttribute("foodList",
                 foodService.getAllFoods());
-        return "Food/list-food";
+        return "food/food-list";
     }
 
     @GetMapping("/search")
@@ -32,14 +32,14 @@ public class FoodController {
         model.addAttribute("foodList",
                 foodService.getAllFoods(keyword));
         model.addAttribute("keyword", keyword);
-        return "Food/list-food";
+        return "food/food-list";
     }
 
     @GetMapping("/id={foodId}")
     public String getFood(@PathVariable long foodId, Model model) {
         model.addAttribute("food",
                 foodService.getFood(foodId));
-        return "Foods/detail-food";
+        return "food/food-detail";
     }
 
     @GetMapping("/delete/id={foodId}")
@@ -63,13 +63,14 @@ public class FoodController {
 
     @GetMapping("/new-food")
     public String newFoodForm(Model model) {
-        return "Foods/new-food";
+
+        return "food/food-new";
     }
 
     @GetMapping("/update/id={foodId}")
     public String updateFoodForm(@PathVariable long foodId, Model model) {
         model.addAttribute("food",
                 foodService.getFood(foodId));
-        return "Food/edit-food";
+        return "food/food-edit";
     }
 }
